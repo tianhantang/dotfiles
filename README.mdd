@@ -1,1 +1,14 @@
 This repo. contains various config. files used for CLI based workflow.
+
+=== Folder structure
+
+.
+|- config
+|- |- tmux-conf.txt
+
+=== Usage
+
+--- tmux
+
+Create a symbolic to `config/tmux-conf.txt` at `~/.tmux.conf`.
+
