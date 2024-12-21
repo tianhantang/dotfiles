@@ -1,8 +1,14 @@
-# HOW:
+# +++ header
+# @file: tmux-conf.txt
+# @brief:
 # - create a symbolic link at $HOME/.tmux.conf
 # - need the proper setting of TERMINFO (see zsh-config.sh)
+# @remarks:
+# - `set-option default-command` is used instead of `set-option default-shell`, since the latter causes some problem for MATLAB to call native commands (e.g. ls)
+# - `set-option -g default-terminal 'xterm-256color'` is not used, since the side-effect is unclear
+# ++++
 
-# use PoewrShell in each session (load PROFILE manually)
+# use PoewrShell in each session (source PROFILE manually)
 set-option -g default-command 'pwsh -NoExit -Command  ". ~/.pwshrc.ps1"'
 set-option -g default-terminal 'tmux'
 
@@ -33,8 +39,3 @@ set-option -g status off
 
 # set larger history
 set-option -g history-limit 3000
-
-# POSTLOG
-# --------------------------------
-# - `set-option default-command` is used instead of `set-option default-shell`, since the latter causes some problem for MATLAB to call native commands (e.g. ls)
-# - `set-option -g default-terminal 'xterm-256color'` is not used, since the side-effect is unclear
